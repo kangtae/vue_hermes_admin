@@ -6,7 +6,7 @@ input[type='checkbox'] {
   appearance: none;
   width:$size;
   height:$size;
-  // background-image:url(../images/form/checkbox.png);
+  background-image:url(~@/assets/images/form/checkbox.png);
   background-size:auto $size;
   &:focus { outline:none; background-position:-$size 0; }
   &:checked { background-position:-($size * 2) 0; }

@@ -21,7 +21,7 @@
 					<div class="form-group">
 						<div class="col-sm-12">
 							<div class="input-group">
-								<span class="input-group-addon1111">
+								<span class="input-group-addon">
 									<i class="glyphicon glyphicon-lock"></i>
 								</span>
 								<input id="password" type="password" placeholder="Password" class="form-control" />

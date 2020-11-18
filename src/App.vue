@@ -1,25 +1,26 @@
 <template>
 	<div class="app">
-		1
-		<AppHeader></AppHeader>
+		<!-- <AppHeader></AppHeader>
 		<div class="app-contents">
 			<router-view></router-view>
 		</div>
 		<AppFooter></AppFooter>
-		<ToastPopup></ToastPopup>
+		<ToastPopup></ToastPopup> -->
+		<LoginView></LoginView>
 	</div>
 </template>
 
 <script>
-import AppHeader from './components/common/AppHeader.vue';
-import AppFooter from './components/common/AppFooter.vue';
-import ToastPopup from './components/common/ToastPopup.vue';
-
+// import AppHeader from './components/common/AppHeader.vue';
+// import AppFooter from './components/common/AppFooter.vue';
+// import ToastPopup from './components/common/ToastPopup.vue';
+import LoginView from './views/LoginView.vue';
 export default {
 	components: {
-		AppHeader,
-		ToastPopup,
-		AppFooter,
+		// AppHeader,
+		// ToastPopup,
+		// AppFooter,
+		LoginView,
 	},
 };
 </script>
@@ -30,7 +31,7 @@ export default {
 @import './assets/libs/arita-dotum/css/arita-dotum.css';
 @import './assets/libs/font-awesome/css/font-awesome.min.css';
 @import './assets/libs/bootstrap/css/bootstrap-custom.css';
-@import './assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css';
+// @import './assets/libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css';
 @import './assets/libs/dropify/css/dropify.min.css';
 @import './assets/libs/ez-space-css/css/ez-space.css';
 @import './assets/scss/common';
