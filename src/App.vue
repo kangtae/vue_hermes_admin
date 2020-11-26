@@ -6,7 +6,7 @@
 		</div>
 		<AppFooter></AppFooter>
 		<ToastPopup></ToastPopup> -->
-		<LoginView></LoginView>
+		<ProductRegistration></ProductRegistration>
 	</div>
 </template>
 
@@ -14,13 +14,13 @@
 // import AppHeader from './components/common/AppHeader.vue';
 // import AppFooter from './components/common/AppFooter.vue';
 // import ToastPopup from './components/common/ToastPopup.vue';
-import LoginView from './views/LoginView.vue';
+import ProductRegistration from './views/ProductRegistration.vue';
 export default {
 	components: {
 		// AppHeader,
 		// ToastPopup,
 		// AppFooter,
-		LoginView,
+		ProductRegistration,
 	},
 };
 </script>
