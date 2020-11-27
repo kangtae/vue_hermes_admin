@@ -5,6 +5,7 @@ import SignupView from '../views/SignupView';
 import MainView from '../views/MainView';
 import PostAddView from '../views/PostAddView';
 import PostDetailView from '../views/PostDetailView';
+import ProductRegistration from '../views/ProductRegistration';
 import store from '../store';
 import { getUserFromCookie } from '../utils/cookies.js';
 
@@ -15,7 +16,7 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
-			redirect: '/test',
+			redirect: '/ProductRegistration',
 		},
 		{
 			path: '/login',
@@ -47,6 +48,11 @@ export default new Router({
 			name: 'detail',
 			component: PostDetailView,
 			beforeEnter,
+		},
+		{
+			path: '/ProductRegistration',
+			name: 'ProductRegistration',
+			component: ProductRegistration,
 		},
 	],
 });

@@ -15,14 +15,14 @@
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav" role="navigation">
 							<li role="presentation" class="dropdown">
-								<a href="../account/계정관리_01비밀번호변경.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">계정관리 <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
+								<a v-on:click="menuToggle" class="dropdown-toggle" role="button">계정관리11 <span class="caret"></span></a>
+								<ul v-show="menuElem" class="dropdown-menu">
 									<li><a href="../account/계정관리_01비밀번호변경.html" class="">비밀번호 변경</a></li>
 								</ul>
 							</li>
 							<li role="presentation" class="dropdown">
-								<a href="../product/상품관리_01목록.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">상품관리 <span class="caret"></span></a>
-								<ul class="dropdown-menu" role="menu">
+								<a v-on:click="menuToggle" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">상품관리 <span class="caret"></span></a>
+								<ul v-show="menuElem" class="dropdown-menu" role="menu">
 									<li><a href="../product/상품관리_01목록.html" class="">목록</a></li>
 									<li><a href="../product/상품관리_02상세.html" class="">상세</a></li>
 									<li><a href="../product/상품관리_03등록.html" class="">등록</a></li>
@@ -61,51 +61,17 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import bus from '@/utils/bus';
-
 export default {
-	computed: {
-		...mapGetters(['isLoggedIn']),
-	},
-	data() {
+	data: function() {
 		return {
-			navHeight: 0,
-			isFixed: false,
+			menuElem: false,
 		};
 	},
-	watch: {
-		$route: 'looseHeader',
-	},
 	methods: {
-		logout() {
-			bus.$emit('show:toast', 'User logged out');
-			this.$store.commit('LOGOUT');
-			this.$router.push('/');
+		menuToggle() {
+			console.log(this);
+			this.menuElem = !this.menuElem;
 		},
-		checkHeight() {
-			window.scrollY > 5 ? this.stickHeader() : this.looseHeader();
-		},
-		stickHeader() {
-			this.isFixed = true;
-			document.querySelector('.main').classList.add('sticky');
-		},
-		looseHeader() {
-			this.isFixed = false;
-			document.querySelector('.main').classList.remove('sticky');
-		},
-	},
-	mounted() {
-		if (this.$route.name !== 'main') {
-			return;
-		}
-		this.navHeight = this.$refs.appHeader.offsetHeight;
-		window.addEventListener('scroll', this.checkHeight);
-	},
-	beforeDestroy() {
-		window.removeEventListener('scroll', this.checkHeight);
 	},
 };
 </script>
-
-<style scoped></style>

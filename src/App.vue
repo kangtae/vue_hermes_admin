@@ -1,12 +1,13 @@
 <template>
 	<div class="app">
 		<!-- <AppHeader></AppHeader>
+		<
+		<AppFooter></AppFooter>
+		<ToastPopup></ToastPopup> -->
 		<div class="app-contents">
 			<router-view></router-view>
 		</div>
-		<AppFooter></AppFooter>
-		<ToastPopup></ToastPopup> -->
-		<ProductRegistration></ProductRegistration>
+		<!-- <ProductRegistration></ProductRegistration> -->
 	</div>
 </template>
 
@@ -14,13 +15,13 @@
 // import AppHeader from './components/common/AppHeader.vue';
 // import AppFooter from './components/common/AppFooter.vue';
 // import ToastPopup from './components/common/ToastPopup.vue';
-import ProductRegistration from './views/ProductRegistration.vue';
+// import ProductRegistration from './views/ProductRegistration.vue';
 export default {
 	components: {
 		// AppHeader,
 		// ToastPopup,
 		// AppFooter,
-		ProductRegistration,
+		// ProductRegistration,
 	},
 };
 </script>
